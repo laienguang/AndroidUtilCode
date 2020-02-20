@@ -341,7 +341,12 @@ public class MessengerUtils {
         @Override
         public int onStartCommand(Intent intent, int flags, int startId) {
             if (intent != null) {
-                Bundle extras = intent.getExtras();
+                Bundle extras = null;
+                try {
+                    extras = intent.getExtras();
+                } catch (RuntimeException e) {
+                    LogUtils.w(e);
+                }
                 if (extras != null) {
                     Message msg = Message.obtain(mReceiveClientMsgHandler, WHAT_SEND);
                     msg.replyTo = messenger;
