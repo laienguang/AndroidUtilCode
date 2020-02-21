@@ -3,8 +3,10 @@ apply {
     plugin Config.depConfig.plugin_maven.pluginId
     plugin Config.depConfig.plugin_bintray.pluginId
     plugin "readme-core"
-    from "${rootDir.path}/gradle/upload/bintrayUploadAndroid.gradle"
+    plugin 'com.github.dcendents.android-maven'
 }
+
+group='com.github.laienguang'
 
 readme {
     readmeFile file('./README.md')

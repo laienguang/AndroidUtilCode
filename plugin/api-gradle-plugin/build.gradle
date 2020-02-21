@@ -43,19 +43,20 @@ sourceSets {
 group = Config.depConfig.plugin_api.groupId
 version = Config.depConfig.plugin_api.version
 
-if (Config.depConfig.plugin_api.useLocal) {
-    uploadArchives {
-        repositories {
-            mavenDeployer {
-                repository(url: uri(new File(project.rootDir.getPath() + "/maven")))
-            }
+//if (Config.depConfig.plugin_api.useLocal) {
+uploadArchives {
+    GLog.l(new File("!!!!!!!!!!!!"+project.rootDir.getPath() + "/maven"))
+    repositories {
+        mavenDeployer {
+            repository(url: uri(new File(project.rootDir.getPath() + "/maven")))
         }
     }
 }
+//}
 
 pluginBundle {
-    website = 'https://github.com/Blankj/AndroidUtilCode'
-    vcsUrl = 'https://github.com/Blankj/AndroidUtilCode.git'
+    website = 'https://github.com/laienguang/AndroidUtilCode'
+    vcsUrl = 'https://github.com/laienguang/AndroidUtilCode.git'
     description = 'Plugin for ApiUtils.'
     tags = ['gradle', 'plugin', 'api', 'ApiUtils', 'asm']
 

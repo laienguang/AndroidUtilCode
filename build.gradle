@@ -28,6 +28,7 @@ buildscript {
         for (def entrySet : ConfigUtils.getApplyPlugins().entrySet()) {
             classpath entrySet.value.dep
         }
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 

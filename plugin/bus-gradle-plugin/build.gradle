@@ -54,8 +54,8 @@ if (Config.depConfig.plugin_bus.useLocal) {
 }
 
 pluginBundle {
-    website = 'https://github.com/Blankj/AndroidUtilCode'
-    vcsUrl = 'https://github.com/Blankj/AndroidUtilCode.git'
+    website = 'https://github.com/laienguang/AndroidUtilCode'
+    vcsUrl = 'https://github.com/laienguang/AndroidUtilCode.git'
     description = 'Plugin for BusUtils used as EventBus.'
     tags = ['gradle', 'plugin', 'bus', 'eventbus', 'BusUtils', 'asm']
 
